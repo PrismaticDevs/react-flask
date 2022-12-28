@@ -21,6 +21,9 @@ body {
     font-family: "Roboto Mono", monospace;
 }
 
+
+/* Navbar */
+
 ul {
     margin: 0;
     padding: 0;
@@ -54,6 +57,9 @@ li a:hover {
     background: rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
+
+
+/* END Navbar END */
 
 article {
     display: flex;
