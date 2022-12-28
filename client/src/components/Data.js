@@ -24,7 +24,7 @@ const Data = () => {
   return (
     <>
       <div style={{ textAlign: "center", padding: "3em" }}>
-        The data displayed below if fetched from a a back end webserver built
+        The data displayed below is fetched from a a back end webserver built
         with a Python module called Flask.
       </div>
       <article

@@ -7,8 +7,9 @@ const Home = () => {
     <div className="page">
       <h1 className="title">PrismaticDevs</h1>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <img src={python} alt="Flask" />
         <img src={react} style={{ height: "7em" }} alt="React" />
+        <h1 style={{ paddingRight: "1em" }}>&</h1>
+        <img src={python} alt="Flask" />
       </div>
     </div>
   );
