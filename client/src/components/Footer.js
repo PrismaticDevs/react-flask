@@ -5,14 +5,16 @@ const Footer = () => {
   return (
     <>
       <footer className="footer">
-        <GitHubIcon className="icon" />
-        <a
-          href="https://github.com/PrismaticDevs"
-          target="_blank"
-          rel="noreferrer"
-        >
-          PrismaticDevs
-        </a>
+        <span title="https://github.com/PrismaticDevs">
+          <a
+            href="https://github.com/PrismaticDevs"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <GitHubIcon className="icon" />
+            <div>PrismaticDevs</div>
+          </a>
+        </span>
       </footer>
     </>
   );

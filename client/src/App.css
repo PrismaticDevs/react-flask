@@ -63,10 +63,25 @@ article {
     align-items: center;
 }
 
-.icon {
-    padding: 0.5em;
+.footer span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer a:hover {
+.footer a {
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    padding: 0.5em;
+    color: white;
+}
+
+.footer .icon:hover,
+.footer a:hover {
+    color: gold;
 }

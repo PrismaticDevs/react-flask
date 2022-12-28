@@ -12,7 +12,8 @@ const Data = () => {
           body: data.data,
         })
         .then((res) => {
-          setData(res.data);
+          const d = res.data;
+          setData(d);
           console.log("data", data, 15);
         })
         .catch((e) => console.log(e));
@@ -22,7 +23,23 @@ const Data = () => {
   });
   return (
     <>
-      <h3>{data.greetings}</h3>
+      <div style={{ textAlign: "center", padding: "3em" }}>
+        The data displayed below if fetched from a a back end webserver built
+        with a Python module called Flask.
+      </div>
+      <article
+        style={{
+          display: "flex",
+          alignItems: " center",
+          justifyContent: "center",
+        }}
+      >
+        {typeof data.greetings === "undefined" ? (
+          <h2>Loading...</h2>
+        ) : (
+          data.greetings.map((greeting, i) => <h4 key={i}>{greeting}</h4>)
+        )}
+      </article>
     </>
   );
 };
