@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Spinner from "./Spinner";
 
 const Data = () => {
   const [data, setData] = useState({
@@ -35,7 +36,7 @@ const Data = () => {
         }}
       >
         {typeof data.greetings === "undefined" ? (
-          <h2>Loading...</h2>
+          <Spinner />
         ) : (
           data.greetings.map((greeting, i) => <h4 key={i}>{greeting}</h4>)
         )}
