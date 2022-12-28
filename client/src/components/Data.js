@@ -20,7 +20,6 @@ const Data = () => {
     getData();
     console.log(data);
   });
-
   return (
     <>
       <h3>{data.greetings}</h3>
