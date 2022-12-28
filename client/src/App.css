@@ -32,6 +32,7 @@ nav a {
     text-decoration: none;
     font-size: 1.5em;
     padding: 1em;
+    margin: 0;
     background: rgba(0, 0, 0, 0.25);
 }
 
@@ -51,16 +52,20 @@ ul {
 nav {
     top: 0;
     left: 0;
-    width: 100vw;
     overflow: hidden;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.25);
 }
 
 article {
     display: flex;
     flex-direction: column;
-    padding-left: 5em;
-    padding-right: 5em;
     text-indent: 2em;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 1em;
+    border-radius: 0.5em 0.5em 0.5em;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.75);
 }
 
 .footer {
