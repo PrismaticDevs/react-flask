@@ -20,7 +20,7 @@ const Data = () => {
     getData();
     console.log(data);
   });
-  // why is this not working???
+
   return (
     <>
       <h3>{data.greetings}</h3>
