@@ -17,14 +17,13 @@ const Data = () => {
           if (d !== null) {
             setData(d);
           }
-          console.log("data", data, 15);
         })
         .catch((e) => console.log(e));
     };
     if (data.data === "") {
       getData();
     }
-    console.log(data);
+    console.log(data, 26);
   }, [data]);
   return (
     <>
