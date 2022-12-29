@@ -14,14 +14,18 @@ const Data = () => {
         })
         .then((res) => {
           const d = res.data;
-          setData(d);
+          if (d !== null) {
+            setData(d);
+          }
           console.log("data", data, 15);
         })
         .catch((e) => console.log(e));
     };
-    getData();
+    if (data.data === "") {
+      getData();
+    }
     console.log(data);
-  });
+  }, [data]);
   return (
     <>
       <div style={{ textAlign: "center", padding: "3em" }}>
