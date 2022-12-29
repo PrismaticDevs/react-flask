@@ -9,7 +9,7 @@ const Data = () => {
   useEffect(() => {
     const getData = async () => {
       await axios
-        .get("http://localhost:5000/data", {
+        .get("http://localhost:5001/data", {
           body: data.data,
         })
         .then((res) => {
