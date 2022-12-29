@@ -6,7 +6,12 @@ const Form = () => {
     <div>
       <Box
         component="form"
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "2em",
+        }}
         autoComplete="on"
       >
         <TextField
@@ -20,7 +25,9 @@ const Form = () => {
           variant="filled"
           label="New Greeting"
         />
-        <Button variant="contained">Add</Button>
+        <Button sx={{ marginLeft: "2em" }} variant="contained">
+          Add
+        </Button>
       </Box>
     </div>
   );
