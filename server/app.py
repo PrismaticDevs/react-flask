@@ -13,7 +13,8 @@ def data():
 
 # @app.route('/create', method="post")
 # def create():
-#     result = request.form
+#     result = request.form['greeting']
+#     return result
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
