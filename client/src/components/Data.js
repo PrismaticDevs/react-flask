@@ -23,7 +23,6 @@ const Data = () => {
     if (data.data === "") {
       getData();
     }
-    console.log(data, 26);
   }, [data]);
   return (
     <>
