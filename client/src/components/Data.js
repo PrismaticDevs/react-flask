@@ -41,7 +41,11 @@ const Data = () => {
         {typeof data.greetings === "undefined" ? (
           <Spinner />
         ) : (
-          data.greetings.map((greeting, i) => <h4 key={i}>{greeting}</h4>)
+          data.greetings.map((greeting, i) => (
+            <h4 style={{ margin: 1 }} key={i}>
+              {greeting}
+            </h4>
+          ))
         )}
       </article>
     </>
