@@ -42,9 +42,9 @@ const Data = () => {
           <Spinner />
         ) : (
           data.greetings.map((greeting, i) => (
-            <h4 style={{ margin: 1 }} key={i}>
+            <h2 style={{ margin: 1 }} key={i}>
               {greeting}
-            </h4>
+            </h2>
           ))
         )}
       </article>
