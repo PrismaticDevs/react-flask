@@ -1,19 +1,17 @@
-import React from "react";
-import { TextField, Box, Button } from "@mui/material";
+import React, { useState, handleSubmit } from "react";
+// import axios from "axios";
+import { TextField, Button } from "@mui/material";
 
 const Form = () => {
+  const [greeting, setGreeting] = useState("");
+  handleSubmit = (e) => {
+    e.preventDefault();
+    setGreeting(e.target.value);
+    console.log(greeting, 10);
+  };
   return (
     <div>
-      <Box
-        component="form"
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          marginTop: "2em",
-        }}
-        autoComplete="on"
-      >
+      <form onSubmit={handleSubmit}>
         <TextField
           sx={{
             "& .MuiFormLabel-root.Mui-focused": {
@@ -24,11 +22,14 @@ const Form = () => {
           id="greeting-input"
           variant="filled"
           label="New Greeting"
+          onChange={(e) => setGreeting(e.target.value)}
+          required
+          autoFocus
         />
-        <Button sx={{ marginLeft: "2em" }} variant="contained">
+        <Button type="submit" sx={{ marginLeft: "2em" }} variant="contained">
           Add
         </Button>
-      </Box>
+      </form>
     </div>
   );
 };
