@@ -1,5 +1,5 @@
 import React, { useState, handleSubmit } from "react";
-// import axios from "axios";
+import axios from "axios";
 import { TextField, Button } from "@mui/material";
 
 const Form = () => {
@@ -7,6 +7,18 @@ const Form = () => {
   handleSubmit = (e) => {
     e.preventDefault();
     setGreeting(e.target.value);
+    try {
+      axios
+        .post("http://localhost:5001/create", {
+          greeting: greeting,
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    } catch (e) {
+      console.log(e);
+    }
+    setGreeting("");
     console.log(greeting, 10);
   };
   return (
@@ -25,6 +37,7 @@ const Form = () => {
           onChange={(e) => setGreeting(e.target.value)}
           required
           autoFocus
+          value={greeting}
         />
         <Button type="submit" sx={{ marginLeft: "2em" }} variant="contained">
           Add

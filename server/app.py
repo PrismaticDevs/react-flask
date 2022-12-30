@@ -14,7 +14,7 @@ def getData():
 
 @app.route('/create', methods=["POST"])
 def create():
-    result = request.form['greeting']
+    result = request.get_data()
     return data.append(result)
 
 if __name__ == "__main__":
